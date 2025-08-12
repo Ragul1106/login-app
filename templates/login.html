@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Login</h2>
+<form method="POST">
+    {{ form.hidden_tag() }}
+
+    <div class="form-group {% if form.email.errors %}has-error{% endif %}">
+        {{ form.email.label }}<br>
+        {{ form.email(size=30) }}
+        {% for error in form.email.errors %}
+            <small class="error">{{ error }}</small>
+        {% endfor %}
+    </div>
+
+    <div class="form-group {% if form.password.errors %}has-error{% endif %}">
+        {{ form.password.label }}<br>
+        {{ form.password(size=30) }}
+        {% for error in form.password.errors %}
+            <small class="error">{{ error }}</small>
+        {% endfor %}
+    </div>
+
+    {{ form.submit() }}
+</form>
+{% endblock %}

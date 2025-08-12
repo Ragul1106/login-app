@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.container {
+    max-width: 500px;
+    margin: auto;
+}
+
+
+.flash.success {
+    background-color: #4CAF50;
+    padding: 10px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.flash.error {
+    background-color: #f44336;
+    padding: 10px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.has-error input {
+    border: 2px solid red;
+}
+
+.error {
+    color: red;
+    font-size: 0.9em;
+}
